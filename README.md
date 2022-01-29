@@ -1,2 +1,2 @@
 ## Github intro workshop for CANDEV 2022
-Based off of reveal-js [repo](https://github.com/hakimel/reveal.js) and [guide](https://danielabaron.me/blog/build-and-publish-presentation-with-html-and-css/) by Daniela Baron.
+Based on reveal-js [repo](https://github.com/hakimel/reveal.js) and [guide](https://danielabaron.me/blog/build-and-publish-presentation-with-html-and-css/) by Daniela Baron.
