@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/mozilla-devrel-light.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- Add your custom stylesheet here -->
+		<link rel="stylesheet" href="dist/custom.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Introduction to Git and Github</h1>
+					<h3>CANDEV 2022</h3>
+				</section>
+				<section>
+					<h2>Git vs Github</h2>
+					<ul>
+						<li>Git is a version control system</li>
+						<li>GitHub is an internet service used to centrally store git repositories</li>
+					</ul>
+				</section>
+				<section>
+					<h2 class='bordered'>Why use Git?</h2>
+				</section>
+				<section>
+					<h3>Controlling versions can be difficult</h3>
+					<img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="Final.doc cominc" 
+					style="height: 500px;"/>
+					<div class='note'>Source: PhD comics</div>				
+				</section>
+				<section>
+					<h3>With Git, one can</h3>
+					<ul>
+						<li>Track all changes made to a code base, with context</li>
+						<li>Revert changes at any time</li>
+						<li>Work on multiple copies of the code without endless folders</li>
+						<li>Have multiple people work on the same code without breaking things</li>
+						<li>More...</li>
+					</ul>				
+				</section>
+				<section>
+					<h2 class='bordered'>Git concepts</h2>
+				</section>
+				<section>
+					<h3>Modifying and committing code</h3>
+					<p>All code lines exist in one of three states.</p>
+					<ul>
+						<li><b>Modified:</b> Code that has been changed and now differes from the latest committed copy, but is not yet staged.</li>
+						<li><b>Staged:</b> Modified code must be added to the staging area to be committed. Only staged code gets committed.</li>
+						<li><b>Committed:</b> Changes that are now committed to the code history. Usually alongside a commit message.</li>
+					</ul>	
+				</section>
+				<section>
+					<h3>Modifying and committing code</h3>
+					<p><b>Modified</b> code stays in your local copy unless <b>staged</b> and <b>committed.</b></p>
+					<img src="https://miro.medium.com/max/1400/1*sM5iMVJ7XCBbxVuq38X8sw.png" alt="Final.doc cominc" 
+					style="height: 400px;"/>
+					<div class='note'>Source: <a href="https://medium.com/@munniomer/an-intro-to-git-and-github-for-beginners-part-i-tutorial-9be4be9cac8d">Munira Omar</a></div>			
+				</section>
+				<section>
+					<h3>Branching and merging</h3>
+					<ul>
+						<li>All git repositories contain one or more <b>branches</b>.</li>
+						<li>Branches are <b>independent copies</b> of the same code base.</li>
+						<li>Branches share the same history prior to the branch point.</li>
+						<li>Branches will diverge over time unless merged.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Branching and merging</h3>
+					<img src="images/git-branching.png" alt="Git branching">
+					<div class='note'>Source: modified from <a href="https://www.nobledesktop.com/learn/git/git-branches">Noble Desktop</a></div>
+				</section>
+				<section>
+					<h2 class='bordered'>Using github for your Candev submission</h2>
+				</section>
+				<section>
+					<h3>Step 1: create a GitHub account</h3>
+				</section>
+				<section>
+					<h3>Step 2: set up SSH</h3>
+					<ul>
+						<li>Create a local SSH key and adding it to your agent</li>
+						<li>Add the key to your GitHub account</li>
+					</ul>
+					<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Click here for detailed guides on the GitHub website.</a></p>
+				</section>
+				<section>
+					<h3>Step 3: Make a new github repo</h3>
+					<img src="images/new-repo2.png" style="height: 500px" alt="Github new repo button2">
+				</section>
+				<section>
+					<h3>Step 3: Make a new github repo</h3>
+					<img src="images/new-repo.png" alt="Github new repo button">
+				</section>
+				<section>
+					<h3>Step 3: Make a new github repo</h3>
+					<img src="images/new-repo3.png" style="height:500px;" alt="Github new repo button">
+				</section>
+				<section>
+					<h3>Step 4: Setup your local git credentials</h3>
+					<p>Open Git BASH (Windows) or terminal (mac/linux) and add your name and email:</p>
+					<pre><code>
+git config --global user.name "Jason Jensen"
+git config --global user.email jason.jensen@statcan.gc.ca
+					</code></pre>
+					<p>Note: email should match GitHub email.</p>
+				</section>
+				<section>
+					<h3>Step 5: Copy the suggested code from your new repo</h3>
+					<img src="images/new-repo4.png" alt="Github new repo button">
+				</section>
+				<section>
+					<h3>Step 6: Do the initial commit</h3>
+					<ol>
+						<li>Open Git BASH (windows) or terminal (mac/linux)</li>
+						<li>Make a new folder:</li>
+						<pre><code>mkdir team-awesomes-CANDEV-project</code></pre>
+						<li>Change directory to the new folder:</li>
+						<pre><code>cd team-awesomes-CANDEV-project</code></pre>
+						<li>Paste and execute the code copied from github.</li>
+					</ol>
+					<p>Errors may result if SSH was not configured correctly.</p>
+				</section>
+				<section>
+					<h3>Step 7: Do the coding project</h3>
+					<img src="https://www.statcan.gc.ca/sites/default/files/candev6.jpg" alt="CANDEV brainstormning">
+					<div class='note'>Source: <a href="https://www.statcan.gc.ca/en/wtc/candev/october2018/photos">CANDEV 2018</a></div>
+				</section>
+				<section>
+					<h3>Step 8: Copy your solution to the repository folder</h3>
+				</section>
+				<section>
+					<h3>Step 9: Add files to the staging area</h3>
+					<p>Using Git BASH (windows) or terminal (mac/linux) in the repository folder:</p>
+					<ul>
+						<li>List modified files:</li>
+						<pre><code>git status</code></pre>
+						<li>Add all modified files:</li>
+						<pre><code>git add .</code></pre>
+						<p>Note: files can also be added one at a time.</p>
+						<p>Note: use a <a href="https://git-scm.com/docs/gitignore">.gitignore</a> file to exclude groups of files/folders.</p>
+					</ul>
+				</section>
+				<section>
+					<h3>Step 10: Commit staged files</h3>
+					<ul>
+						<li>Confirm staged files:</li>
+						<pre><code>git status</code></pre>
+						<li>Commit staged files:</li>
+						<pre><code>git commit -m "add submission files"</code></pre>
+						<li>Push commit to GitHub:</li>
+						<pre><code>git push origin main</code></pre>
+						<li>Reload GitHub page to confirm files have been added.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Step 11: Include repo URL in CANDEV submission form</h3>
+				</section>
+				
+
+				
+				<section>
+					<h2>Other sources and inspirations</h2>
+					<p>Jacob Fiksel: <a href="https://www.jhsph.edu/research/centers-and-institutes/welch-center-for-prevention-epidemiology-and-clinical-research/events/grand-rounds/presentations/191120%20intro_to_git_github.pdf">Introduction to Git and GitHub</a></p>
+					<p>Munira Omar: <a href="https://medium.com/@munniomer/an-intro-to-git-and-github-for-beginners-part-i-tutorial-9be4be9cac8d">An Intro to Git and GitHub for Beginners Part I (Tutorial)</a></p>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
