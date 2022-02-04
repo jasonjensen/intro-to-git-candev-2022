@@ -93,7 +93,7 @@
 				<section>
 					<h3>Step 2: set up SSH</h3>
 					<ul>
-						<li>Create a local SSH key and adding it to your agent</li>
+						<li>Create a local SSH key and add it to your agent</li>
 						<li>Add the key to your GitHub account</li>
 					</ul>
 					<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Click here for detailed guides on the GitHub website.</a></p>
@@ -174,7 +174,7 @@ git config --global user.email jason.jensen@statcan.gc.ca
 					<h2 class='bordered'>More details on the commit flow</h2>
 				</section>
 				<section>
-					<h3>Checking the diff</h3>
+					<h3>Setup</h3>
 					<p>Situation: repo is set up with a README.md file.</p>
 					<ul>
 						<li>Add a line to the README.md file.</li>
@@ -183,9 +183,9 @@ git config --global user.email jason.jensen@statcan.gc.ca
 					</ul>
 				</section>
 				<section>
-					<h3>Checking the diff</h3>
+					<h3>Checking the status</h3>
 					<ul>
-						<li>Check the status:</li>
+						<li>See which files have changed:</li>
 						<pre><code>git status</code></pre>
 						<img src="images/git-status-1.png" alt="git status output">
 					</ul>
@@ -204,27 +204,22 @@ git config --global user.email jason.jensen@statcan.gc.ca
 						<li>Commit the changed readme:</li>
 						<pre><code>git add README.md
 git status</code></pre>
-						<img src="images/git-diff.png" alt="git diff output">
-					</ul>
-				</section>
-				<section>
-					<h3>Checking the status again</h3>
-					<ul>
-						<li>Check the status:</li>
-						<pre><code>git status</code></pre>
-						<img src="images/git-status-2.png" alt="git status output">
+						<img src="images/git-status-2.png" alt="git diff output">
 					</ul>
 				</section>
 				<section>
 					<h3>Committing and pushing staged changes</h3>
 					<ul>
 						<li>Commit the changes</li>
-						<pre><code>git commit -m "edit readme"</code></pre>
+						<pre><code>git commit -m "change readme"</code></pre>
 						<img src="images/git-commit.png" alt="git commit output">
 						<li>Pushing the commit to github</li>
-						<pre><code>git push origin main"</code></pre>
+						<pre><code>git push origin main</code></pre>
 						<img src="images/git-push.png" alt="git push output">
 					</ul>
+				</section>
+				<section>
+					<h2 class='bordered'>Ignoring files</h2>
 				</section>
 				<section>
 					<h3>Ignoring files</h3>
@@ -250,18 +245,22 @@ git status</code></pre>
 						<pre><code>git status</code></pre>
 						<img src="images/git-status-4.png" alt="git status output">
 					</ul>
-				</section>
-				<section>
-					<h3>Ignoring files</h3>
-					<ul>
-						<li>Check the status:</li>
-						<pre><code>git status</code></pre>
-						<img src="images/git-status-4.png" alt="git status output">
-					</ul>
 					<p>Example .gitignore files: <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
 				</section>
-
-				
+				<section>
+					<h2 class='bordered'>Back matter</h2>
+				</section>
+				<section>
+					<h3>Topics not covered</h3>
+					<ul>
+						<li>Branching and merging</li>
+						<li>Merging conflicts</li>
+						<li>GUI tools (Git GUI, VS Code, GitKraken, others)</li>
+						<li>Git hooks (automation)</li>
+						<li>GitHub/GitLab features (Issue reporting, github pages, CI/CD pipelines, etc.)</li>
+						<li>Probably other things too...</li>
+					</ul>
+				</section>
 				<section>
 					<h2>Other sources and inspirations</h2>
 					<p>Jacob Fiksel: <a href="https://www.jhsph.edu/research/centers-and-institutes/welch-center-for-prevention-epidemiology-and-clinical-research/events/grand-rounds/presentations/191120%20intro_to_git_github.pdf">Introduction to Git and GitHub</a></p>
