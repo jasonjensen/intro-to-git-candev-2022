@@ -170,7 +170,96 @@ git config --global user.email jason.jensen@statcan.gc.ca
 				<section>
 					<h3>Step 11: Include repo URL in CANDEV submission form</h3>
 				</section>
-				
+				<section>
+					<h2 class='bordered'>More details on the commit flow</h2>
+				</section>
+				<section>
+					<h3>Checking the diff</h3>
+					<p>Situation: repo is set up with a README.md file.</p>
+					<ul>
+						<li>Add a line to the README.md file.</li>
+						<img src="images/readme.png" alt="README.md contents">
+						<li>Make a file named "dont_commit_this.py".</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Checking the diff</h3>
+					<ul>
+						<li>Check the status:</li>
+						<pre><code>git status</code></pre>
+						<img src="images/git-status-1.png" alt="git status output">
+					</ul>
+				</section>
+				<section>
+					<h3>Checking the diff</h3>
+					<ul>
+						<li>Investigate what has changed:</li>
+						<pre><code>git diff README.md</code></pre>
+						<img src="images/git-diff.png" alt="git diff output">
+					</ul>
+				</section>
+				<section>
+					<h3>Committing only some files</h3>
+					<ul>
+						<li>Commit the changed readme:</li>
+						<pre><code>git add README.md
+git status</code></pre>
+						<img src="images/git-diff.png" alt="git diff output">
+					</ul>
+				</section>
+				<section>
+					<h3>Checking the status again</h3>
+					<ul>
+						<li>Check the status:</li>
+						<pre><code>git status</code></pre>
+						<img src="images/git-status-2.png" alt="git status output">
+					</ul>
+				</section>
+				<section>
+					<h3>Committing and pushing staged changes</h3>
+					<ul>
+						<li>Commit the changes</li>
+						<pre><code>git commit -m "edit readme"</code></pre>
+						<img src="images/git-commit.png" alt="git commit output">
+						<li>Pushing the commit to github</li>
+						<pre><code>git push origin main"</code></pre>
+						<img src="images/git-push.png" alt="git push output">
+					</ul>
+				</section>
+				<section>
+					<h3>Ignoring files</h3>
+					<ul>
+						<li>The untracked file is still showing up:</li>
+						<pre><code>git status</code></pre>
+						<img src="images/git-status-3.png" alt="git status output">
+					</ul>
+				</section>
+				<section>
+					<h3>Ignoring files</h3>
+					<ul>
+						<li>This can be fixed with a .gitignore file</li>
+						<p>Note: no characters before the filetype extension (before the period)</p>
+						<li>The gitignore file takes various gulp-like patterns:</li>
+						<img src="images/gitignore.png" alt="gitignore contents">
+					</ul>
+				</section>
+				<section>
+					<h3>Ignoring files</h3>
+					<ul>
+						<li>Check the status:</li>
+						<pre><code>git status</code></pre>
+						<img src="images/git-status-4.png" alt="git status output">
+					</ul>
+				</section>
+				<section>
+					<h3>Ignoring files</h3>
+					<ul>
+						<li>Check the status:</li>
+						<pre><code>git status</code></pre>
+						<img src="images/git-status-4.png" alt="git status output">
+					</ul>
+					<p>Example .gitignore files: <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
+				</section>
 
 				
 				<section>
